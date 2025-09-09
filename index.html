@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YDS için Çeviri Teknikleri ve Sınav Stratejileri</title>
+    <title>YDS Okuma Parçası (Reading) Stratejileri</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,12 +28,14 @@
             margin-bottom: 1.5rem;
             border-radius: 0.5rem;
         }
-        .main-verb { color: #1d4ed8; font-weight: 700; }
-        .subject { color: #be123c; font-weight: 700; }
-        .sub-clause { color: #059669; font-style: italic; }
-        .main-clause { background-color: #eff6ff; padding: 2px 5px; border-radius: 4px; }
-        .wrong-translation { background-color: #fee2e2; color: #991b1b; padding: 0.5rem; border-radius: 0.25rem; }
-        .correct-translation { background-color: #dcfce7; color: #166534; padding: 0.5rem; border-radius: 0.25rem; }
+        .clue { background-color: #dbeafe; color: #1e40af; padding: 2px 5px; border-radius: 4px; font-weight: 600; }
+        .example {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-left: 3px solid #fbbf24; /* amber-400 */
+            background-color: white;
+            border-radius: 0.5rem;
+        }
         
         .content-wrapper {
             transition: max-height 0.5s ease-in-out;
@@ -41,7 +43,7 @@
             max-height: 0;
         }
         .content-wrapper.open {
-            max-height: 4000px; /* İçeriğin sığacağı kadar büyük bir değer */
+            max-height: 5000px; 
         }
         .chevron {
             transition: transform 0.3s ease-in-out;
@@ -69,171 +71,121 @@
 
         <!-- Başlık -->
         <header class="text-center mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-900">YDS Çeviri Stratejileri Rehberi</h1>
-            <p class="mt-4 text-lg text-gray-600">Cümle yapısını anlayın, püf noktalarını öğrenin ve doğru çeviriye ulaşın.</p>
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900">YDS/YDT Okuma Parçası Stratejileri</h1>
+            <p class="mt-4 text-lg text-gray-600">En önemli 10 strateji ile okuma sorularında netlerinizi artırın.</p>
         </header>
 
-        <!-- BÖLÜM 1: TEMEL PRENSİPLER -->
+        <!-- BÖLÜM 1: TEMEL YAKLAŞIM -->
         <section class="mb-12">
             <h2 class="section-toggle text-3xl font-bold mb-2 border-l-4 border-gray-500 pl-4 flex justify-between items-center cursor-pointer" data-target="#bolum1-content">
-                <span>Bölüm 1: Temel Çeviri Prensipleri</span>
+                <span>Bölüm 1: Okuma Sorularının Mantığı</span>
                 <svg class="chevron w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
             </h2>
             <div id="bolum1-content" class="content-wrapper pl-6">
                 <div class="card mt-4">
-                    <p>İyi bir çeviri, kelimeleri tek tek çevirmek değil, cümlenin anlamını ve yapısını doğru bir şekilde Türkçe'ye aktarmaktır. Sınavda başarılı olmak için şu üç temel adımı izleyin:</p>
-                    <ol class="list-decimal list-inside mt-4 space-y-2">
-                        <li><strong>Önce Cümlenin İskeletini Bulun:</strong> Cümlenin ana öznesini (Subject) ve ana fiilini (Main Verb) tespit edin. Cümlenin temel anlamı bu ikili üzerindedir.</li>
-                        <li><strong>Yan Cümleleri ve Bağlaçları Çözümleyin:</strong> Ana cümleye ek bilgi veren yan cümlecikleri (`who`, `which`, `because`, `if` vb. ile başlayan) ve bunların ana cümleye nasıl bağlandığını anlayın.</li>
-                        <li><strong>Türkçe Cümle Kurallarına Uyun:</strong> İngilizce'deki S+V+O (Özne+Fiil+Nesne) yapısını, Türkçe'nin kurallı cümle yapısına (genellikle Özne+...Nesne...+Yüklem) doğru şekilde dönüştürün.</li>
-                    </ol>
+                    <p>Okuma parçası soruları, bir metni anlayıp yorumlama becerinizi ölçer. Amaç, metindeki her kelimeyi anlamak değil, sorulan sorulara doğru ve hızlı bir şekilde cevap verebilecek bilgiyi metinden bulup çıkarmaktır. Bu bölüm, kelime bilgisi, gramer ve stratejik düşünmenin bir birleşimidir.</p>
                 </div>
             </div>
         </section>
 
-        <!-- BÖLÜM 2: CÜMLE YAPISINI ÇÖZÜMLEME -->
+        <!-- BÖLÜM 2: EN ETKİLİ 10 STRATEJİ -->
         <section class="mb-12">
             <h2 class="section-toggle text-3xl font-bold mb-2 border-l-4 border-blue-500 pl-4 flex justify-between items-center cursor-pointer" data-target="#bolum2-content">
-                <span>Bölüm 2: Cümle Yapısını Çözümleme Sanatı</span>
+                <span>Bölüm 2: En Etkili 10 Sınav Stratejisi</span>
                 <svg class="chevron w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
             </h2>
             <div id="bolum2-content" class="content-wrapper pl-6">
-                <div class="card mt-4">
-                    <h3 class="font-semibold text-xl mb-4">Ana Cümle ve Ana Fiili Bulmak</h3>
-                     <div class="strategy-box">
-                        <p class="font-semibold">Örnek Analizi 1 (Adjective Clause):</p>
-                        <p class="mt-2 text-lg">"The scientist <em class="sub-clause">who won the Nobel Prize last year</em> <strong class="main-verb">visited</strong> our university."</p>
-                        <div class="mt-4">
-                            <p class="font-medium">❌ Yanlış Çeviri (Sık Yapılan Hata):</p>
-                            <p class="wrong-translation">"Geçen yıl Nobel Ödülü'nü kazanan bilim insanı üniversitemizi ziyaret etmişti."</p>
-                            <p class="text-sm mt-1"><strong>Neden Yanlış?</strong> Bu çevirideki "-mişti" eki, İngilizce'deki Past Perfect Tense (`had visited`) karşılığıdır. Orijinal cümlede ise Past Simple Tense (`visited`) kullanılmıştır. Bu, zaman kaymasına neden olan yaygın bir hatadır.</p>
-                        </div>
-                        <div class="mt-4">
-                            <p class="font-medium">✅ Doğru Çeviri ve Analiz:</p>
-                            <p class="correct-translation">Geçen yıl Nobel Ödülü'nü kazanan bilim insanı, üniversitemizi ziyaret etti.</p>
-                             <p class="text-sm mt-1"><strong>Analiz:</strong> Cümlenin ana fiili `visited` (ziyaret etti), öznesi ise `The scientist who won...` (kazanan bilim insanı)'dır. Çeviri, bu temel Özne-Yüklem iskeletine ve doğru zamana sadık kalmalıdır. (Strateji 1)</p>
-                        </div>
+                <div class="strategy-box mt-4">
+                    <h3 class="font-semibold text-lg mb-2">1. Önce Soru Köklerini Oku</h3>
+                    <p>Parçayı okumadan önce soru köklerine hızlıca göz atın. Bu, beyninize ne tür bilgiler araması gerektiğini önceden bildirir ve metni okurken ilgili kısımlara daha fazla odaklanmanızı sağlar. Anahtar kelimelerin (isim, tarih, yer vb.) altını çizin.</p>
+                    <div class="example">
+                        <p class="text-sm"><strong>Örnek:</strong> Soru kökleri "According to the passage, what was one effect of the Industrial Revolution on cities?" ve "It can be inferred from the passage that before the 1800s..." şeklinde ise, metni okurken "Sanayi Devrimi'nin etkileri" ve "1800'ler öncesi durum" ile ilgili kısımlara özel dikkat göstermeniz gerektiğini anlarsınız.</p>
                     </div>
-                     <div class="strategy-box">
-                        <p class="font-semibold">Örnek Analizi 2 (Adverb Clause & Bağlaç):</p>
-                        <p class="mt-2 text-lg">"<em class="sub-clause">Although the team played well</em>, <span class="subject">they</span> <strong class="main-verb">lost</strong> the match."</p>
-                         <div class="mt-4">
-                            <p class="font-medium">❌ Yanlış Çeviri (Sık Yapılan Hata):</p>
-                            <p class="wrong-translation">"Takım iyi oynadı ama maçı kaybetti."</p>
-                            <p class="text-sm mt-1"><strong>Neden Yanlış?</strong> `Although` bağlacı `but` (ama) ile yakın anlamlı olsa da, cümlenin yapısını değiştirir. `Although` ile başlayan yan cümle, ana cümlenin başına gelerek zarf görevi görür. "Ama" bağlacı ise iki ana cümleyi ortadan bağlar. Bu çeviri, orijinal cümlenin yapısını tam olarak yansıtmaz.</p>
-                        </div>
-                        <div class="mt-4">
-                            <p class="font-medium">✅ Doğru Çeviri ve Analiz:</p>
-                            <p class="correct-translation">Takım iyi oynamasına rağmen maçı kaybetti.</p>
-                             <p class="text-sm mt-1"><strong>Analiz:</strong> `Although` bağlacı "-e rağmen" anlamı katar ve yan cümlenin ana cümleye bir zıtlık koşulu eklemesini sağlar. Doğru çeviri, bu bağlacın anlamını tam olarak yansıtmalıdır. (Strateji 2)</p>
-                        </div>
+                </div>
+                <div class="strategy-box">
+                    <h3 class="font-semibold text-lg mb-2">2. Ana Fikri Bul (Skimming)</h3>
+                    <p>Parçanın ilk ve son cümlelerini, ayrıca her paragrafın ilk cümlesini okuyarak metnin genel konusunu ve ana fikrini (main idea) hızla anlamaya çalışın. Bu, "parçanın temel amacı nedir?" gibi genel soruları cevaplamanıza yardımcı olur.</p>
+                     <div class="example">
+                        <p class="text-sm"><strong>Örnek:</strong> Bir paragraf "The benefits of bilingualism are numerous..." diye başlıyor ve "In conclusion, learning a second language offers significant cognitive advantages..." diye bitiyorsa, parçanın ana fikrinin "iki dilliliğin zihinsel faydaları" olduğunu hızlıca anlarsınız.</p>
                     </div>
-                     <div class="strategy-box">
-                        <p class="font-semibold">Örnek Analizi 3 (Passive Voice):</p>
-                        <p class="mt-2 text-lg">"<span class="subject">A new policy</span> <strong class="main-verb">has been implemented</strong> <em class="sub-clause">to reduce pollution</em>."</p>
-                         <div class="mt-4">
-                            <p class="font-medium">❌ Yanlış Çeviri (Sık Yapılan Hata):</p>
-                            <p class="wrong-translation">"Yeni bir politika kirliliği azaltmak için uyguladı."</p>
-                            <p class="text-sm mt-1"><strong>Neden Yanlış?</strong> Bu çeviri, pasif (edilgen) olan `has been implemented` yapısını aktif (etken) bir fiilmiş gibi çevirmiştir. Politika bir şeyi uygulamaz, politika uygulanır. Bu, cümlenin anlamını tamamen bozar.</p>
-                        </div>
-                        <div class="mt-4">
-                            <p class="font-medium">✅ Doğru Çeviri ve Analiz:</p>
-                            <p class="correct-translation">Kirliliği azaltmak için yeni bir politika uygulanmıştır.</p>
-                             <p class="text-sm mt-1"><strong>Analiz:</strong> `has been implemented` yapısı pasif olduğu için Türkçe'ye "-mıştır, -ilmiştir" gibi edilgenlik ekleriyle çevrilmelidir. Eylemi yapan değil, eylemden etkilenen (politika) öznedir. (Strateji 3)</p>
-                        </div>
+                </div>
+                <div class="strategy-box">
+                    <h3 class="font-semibold text-lg mb-2">3. Anahtar Kelimeleri Tara (Scanning)</h3>
+                    <p>Spesifik bilgi soran sorulardaki (örn: "According to the passage, in 1995...") anahtar kelimeleri (1995 gibi) metinde hızla tarayarak bulun. Cevap genellikle o kelimenin geçtiği cümlenin içinde veya etrafındadır.</p>
+                     <div class="example">
+                        <p class="text-sm"><strong>Örnek Soru:</strong> "What significant event happened in <span class="clue">1969</span> according to the text?"<br><strong>Metin içinde:</strong> "...The Apollo 11 mission, which successfully landed humans on the Moon in <span class="clue">1969</span>, was a monumental achievement..."<br><strong>Analiz:</strong> Metinde "1969" kelimesini bulduğunuzda, cevabın "insanların Ay'a inmesi" ile ilgili olduğunu hemen anlarsınız.</p>
                     </div>
-                     <div class="strategy-box">
-                        <p class="font-semibold">Örnek Analizi 4 (Miktar İfadesi):</p>
-                        <p class="mt-2 text-lg">"<span class="subject">Only a few students</span> <em class="sub-clause">who took the advanced course</em> <strong class="main-verb">understood</strong> the professor's lecture."</p>
-                        <div class="mt-4">
-                            <p class="font-medium">❌ Yanlış Çeviri (Sık Yapılan Hata):</p>
-                            <p class="wrong-translation">"İleri seviye dersi alan az sayıda öğrenci profesörün dersini anladı."</p>
-                            <p class="text-sm mt-1"><strong>Neden Yanlış?</strong> Bu çeviri doğruya yakın olsa da, cümlenin anlamını kısıtlayan ve vurgulayan `Only` (sadece) kelimesini atlamıştır. Sınavlarda bu tür küçük ama önemli detaylar şıkları birbirinden ayırır.</p>
-                        </div>
-                        <div class="mt-4">
-                            <p class="font-medium">✅ Doğru Çeviri ve Analiz:</p>
-                            <p class="correct-translation">İleri seviye dersi alan sadece birkaç öğrenci profesörün dersini anladı.</p>
-                             <p class="text-sm mt-1"><strong>Analiz:</strong> `Only a few` ifadesi "az sayıda" değil, "sadece birkaç" olarak daha kesin bir anlam taşır. Çeviride bu kısıtlayıcı ifadenin tam karşılığı verilmelidir. (Strateji 4)</p>
-                        </div>
+                </div>
+                 <div class="strategy-box">
+                    <h3 class="font-semibold text-lg mb-2">4. Çıkarım Sorularına Dikkat Et</h3>
+                    <p>Soru kökünde <span class="clue">infer</span>, <span class="clue">imply</span>, <span class="clue">suggest</span>, <span class="clue">conclude</span> gibi ifadeler varsa, cevap metinde doğrudan yazmaz. Metinde verilen bilgilerden yola çıkarak mantıksal bir sonuca ulaşmanız gerekir. Cevap, metinle desteklenebilir olmalı ama metnin birebir aynısı olmamalıdır.</p>
+                     <div class="example">
+                        <p class="text-sm"><strong>Metin:</strong> "The museum was almost empty; only a few visitors were wandering through the vast halls."<br><strong>Soru:</strong> "It can be inferred from the passage that the museum..."<br><strong>Çıkarım:</strong> "...was not very popular on that day." (Metin "popüler değildi" demez, ama "neredeyse boştu" demesinden bu sonucu çıkarabiliriz.)</p>
                     </div>
-                     <div class="strategy-box">
-                        <p class="font-semibold">Örnek Analizi 5 (Noun Clause):</p>
-                        <p class="mt-2 text-lg">"<span class="subject">The committee</span> <strong class="main-verb">announced</strong> <em class="sub-clause">that the project would be delayed</em>."</p>
-                        <div class="mt-4">
-                            <p class="font-medium">❌ Yanlış Çeviri (Sık Yapılan Hata):</p>
-                            <p class="wrong-translation">"Projenin erteleneceği komite tarafından duyuruldu."</p>
-                            <p class="text-sm mt-1"><strong>Neden Yanlış?</strong> Orijinal cümle aktif bir yapıdadır (`The committee announced...`). Bu çeviri ise cümleyi pasif hale getirmiştir (`...duyuruldu`). Bu, cümlenin öznesini ve vurgusunu değiştirir.</p>
-                        </div>
-                        <div class="mt-4">
-                            <p class="font-medium">✅ Doğru Çeviri ve Analiz:</p>
-                            <p class="correct-translation">Komite, projenin erteleneceğini duyurdu.</p>
-                             <p class="text-sm mt-1"><strong>Analiz:</strong> Cümlenin ana öznesi `The committee` ve ana fiili `announced` olduğu için çeviri bu aktif yapıyı korumalıdır. `that...` ile başlayan Noun Clause ise cümlenin nesnesidir. (Strateji 1 & 3)</p>
-                        </div>
+                </div>
+                 <div class="strategy-box">
+                    <h3 class="font-semibold text-lg mb-2">5. Referans İfadelerini Takip Et</h3>
+                    <p>Metin içindeki <span class="clue">it</span>, <span class="clue">they</span>, <span class="clue">this</span>, <span class="clue">that</span>, <span class="clue">such</span> gibi zamirlerin hangi kelime veya fikre gönderme yaptığını bulmak, cümleler arası bağlantıyı ve dolayısıyla metnin bütününü anlamanızı sağlar.</p>
+                     <div class="example">
+                        <p class="text-sm"><strong>Örnek:</strong> "The Amazon rainforest produces about 20% of the world's oxygen. For this reason, <span class="clue">it</span> is often called the 'lungs of the planet'."<br><strong>Analiz:</strong> Buradaki "<span class="clue">it</span>" zamiri, bir önceki cümlede bahsedilen "The Amazon rainforest"e gönderme yapmaktadır.</p>
                     </div>
-                     <div class="strategy-box">
-                        <p class="font-semibold">Örnek Analizi 6 (Karmaşık Yapı):</p>
-                        <p class="mt-2 text-lg">"<span class="subject">Many experts</span> <strong class="main-verb">believe</strong> <em class="sub-clause">that the new regulations, which were introduced to protect the environment, will also boost the economy.</em>"</p>
-                        <div class="mt-4">
-                            <p class="font-medium">❌ Yanlış Çeviri (Sık Yapılan Hata):</p>
-                            <p class="wrong-translation">"Birçok uzman, yeni düzenlemelerin ekonomiyi de canlandıracağına ve çevreyi korumak için getirildiğine inanıyor."</p>
-                            <p class="text-sm mt-1"><strong>Neden Yanlış?</strong> Bu çeviri, iç içe geçmiş iki yan cümleyi sanki aynı seviyedeymiş gibi "ve" bağlacıyla bağlamıştır. Oysa `which...` ile başlayan kısım, `that...` ile başlayan cümlenin içindeki "regulations" kelimesini niteleyen bir ara bilgidir.</p>
-                        </div>
-                        <div class="mt-4">
-                            <p class="font-medium">✅ Doğru Çeviri ve Analiz:</p>
-                            <p class="correct-translation">Birçok uzman, çevreyi korumak için getirilen yeni düzenlemelerin ekonomiyi de canlandıracağına inanıyor.</p>
-                             <p class="text-sm mt-1"><strong>Analiz:</strong> `which...` ile başlayan Adjective Clause, nitelediği isim olan "yeni düzenlemeler" ifadesinin hemen arkasına "-an/-en" ekiyle eklenmelidir. Bu, cümlenin doğru ve akıcı olmasını sağlar.</p>
-                        </div>
+                </div>
+                 <div class="strategy-box">
+                    <h3 class="font-semibold text-lg mb-2">6. Kelime Anlamını Bağlamdan Çıkar</h3>
+                    <p>Anlamını bilmediğiniz bir kelime sorulduğunda, o kelimenin geçtiği cümlenin öncesini ve sonrasını okuyun. Cümlenin genel gidişatı (olumlu/olumsuz) ve etrafındaki kelimeler, o kelimenin anlamı hakkında size güçlü ipuçları verecektir.</p>
+                     <div class="example">
+                        <p class="text-sm"><strong>Örnek:</strong> "The new policy was met with <span class="clue">acclaim</span>; citizens and politicians alike praised the government's decision."<br><strong>Analiz:</strong> Cümlenin ikinci kısmında "vatandaşlar ve politikacılar kararı övdü" deniyor. Buradan "<span class="clue">acclaim</span>" kelimesinin "övgü, alkış, beğeni" gibi olumlu bir anlama geldiğini çıkarabiliriz.</p>
                     </div>
+                </div>
+                 <div class="strategy-box">
+                    <h3 class="font-semibold text-lg mb-2">7. Kesin İfadelere Şüpheyle Yaklaş</h3>
+                    <p>Seçeneklerde <span class="clue">only</span>, <span class="clue">never</span>, <span class="clue">always</span>, <span class="clue">all</span>, <span class="clue">every</span>, <span class="clue">the most</span> gibi çok kesin ve iddialı ifadeler varsa, bu seçeneklerin yanlış olma ihtimali yüksektir. Akademik metinler genellikle daha olasılıklı ve yumuşak bir dil kullanır (`may`, `can`, `often`, `some` vb.).</p>
+                     <div class="example">
+                        <p class="text-sm"><strong>Metin:</strong> "Some studies suggest that coffee may have certain health benefits."<br><strong>Yanlış Seçenek:</strong> "Coffee is <span class="clue">always</span> beneficial for health."<br><strong>Analiz:</strong> Metindeki "bazı çalışmalar" ve "olabilir" gibi yumuşak ifadeler, seçenekteki "her zaman" gibi kesin bir ifadeyle çelişir.</p>
+                    </div>
+                </div>
+                 <div class="strategy-box">
+                    <h3 class="font-semibold text-lg mb-2">8. Yazarın Niyetini ve Tonunu Anla</h3>
+                    <p>Soru kökünde <span class="clue">attitude</span>, <span class="clue">tone</span>, <span class="clue">purpose</span> gibi kelimeler varsa, yazarın konuya nasıl yaklaştığını anlamanız gerekir. Yazar konuyu eleştiriyor mu (`critical`), destekliyor mu (`supportive`), yoksa sadece bilgi mi veriyor (`neutral`, `informative`)?</p>
+                     <div class="example">
+                        <p class="text-sm"><strong>Metin:</strong> "While the new technology has some promising features, its high cost and potential for misuse raise serious concerns."<br><strong>Analiz:</strong> Yazar hem olumlu ("promising") hem de olumsuz ("serious concerns") yönleri belirttiği için, tonu "dengeli" (`balanced`) veya "temkinli" (`cautious`) olarak yorumlanabilir.</p>
+                    </div>
+                </div>
+                <div class="strategy-box">
+                    <h3 class="font-semibold text-lg mb-2">9. "Değinilmemiştir" Sorularında Eleme Yap</h3>
+                    <p>Soru kökünde <span class="clue">not mentioned</span>, <span class="clue">not stated</span>, <span class="clue">except</span> gibi olumsuz ifadeler varsa, doğru strateji "doğruyu bulmak" değil, "yanlışları elemek"tir. Seçeneklerdeki ifadelerden metinde bahsedilen üç tanesini bulup elediğinizde, geriye kalan cevap doğru olacaktır.</p>
+                </div>
+                 <div class="strategy-box">
+                    <h3 class="font-semibold text-lg mb-2">10. Zaman Yönetimi Yap</h3>
+                    <p>Bir okuma parçasında veya soruda çok fazla takılıp kalmayın. Cevabından emin değilseniz, en mantıklı bulduğunuz seçeneği işaretleyip bir sonraki soruya geçin. Tüm soruları bitirdikten sonra vaktiniz kalırsa geri dönebilirsiniz.</p>
                 </div>
             </div>
         </section>
 
-        <!-- BÖLÜM 3: SINAV STRATEJİLERİ -->
-        <section class="mb-12">
-            <h2 class="section-toggle text-3xl font-bold mb-2 border-l-4 border-green-500 pl-4 flex justify-between items-center cursor-pointer" data-target="#bolum3-content">
-                <span>Bölüm 3: YDS için Çeviri Püf Noktaları</span>
+        <!-- BÖLÜM 3: GEMINI İLE PRATİK -->
+        <section>
+            <h2 class="section-toggle text-3xl font-bold mb-2 border-l-4 border-indigo-500 pl-4 flex justify-between items-center cursor-pointer" data-target="#bolum3-content">
+                <span>✨ Bölüm 3: Gemini ile Strateji Pratiği</span>
                 <svg class="chevron w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
             </h2>
             <div id="bolum3-content" class="content-wrapper pl-6">
-                <div class="strategy-box mt-4">
-                    <h3 class="font-semibold text-lg mb-2">1. Özne ve Yüklem Eşleştirmesi Yapın</h3>
-                    <p>İngilizce cümlenin öznesini ve ana fiilini bulun. Sonra seçeneklerde bu özne ve yüklemin doğru çevrildiği şıkkı arayın. Bu yöntem, seçeneklerin çoğunu elemenizi sağlar.</p>
-                </div>
-                <div class="strategy-box">
-                    <h3 class="font-semibold text-lg mb-2">2. Bağlaçların Karşılığını Doğru Bulun</h3>
-                    <p>`Although` -> "-e rağmen", `Since` -> "-dığı için / -den beri", `Unless` -> "-medikçe" gibi bağlaçların Türkçe karşılıklarını doğru içeren seçeneğe odaklanın.</p>
-                </div>
-                <div class="strategy-box">
-                    <h3 class="font-semibold text-lg mb-2">3. Pasif (Passive) ve Aktif (Active) Ayrımına Dikkat Edin</h3>
-                    <p>İngilizce cümledeki `is done`, `was built`, `have been seen` gibi pasif yapılar, Türkçe'ye de "-ılmak, -ilmek" gibi edilgenlik ekleriyle çevrilmelidir. Aktif bir cümlenin çevirisi pasif olamaz.</p>
-                </div>
-                 <div class="strategy-box">
-                    <h3 class="font-semibold text-lg mb-2">4. Miktar ve Sıfat İfadelerini Gözden Kaçırmayın</h3>
-                    <p>`Some`, `many`, `more`, `the most`, `only`, `especially` gibi kelimeler cümlenin anlamını değiştirir. Çeviride bu kelimelerin karşılığının bulunduğundan emin olun.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- BÖLÜM 4: GEMINI İLE PRATİK -->
-        <section>
-            <h2 class="section-toggle text-3xl font-bold mb-2 border-l-4 border-indigo-500 pl-4 flex justify-between items-center cursor-pointer" data-target="#bolum4-content">
-                <span>✨ Bölüm 4: Gemini ile Çeviri Pratiği</span>
-                <svg class="chevron w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-            </h2>
-            <div id="bolum4-content" class="content-wrapper pl-6">
-                <div class="card mt-4">
-                    <p class="text-center text-gray-700 mb-4">Aşağıdaki butona basarak yeni bir çeviri sorusu oluşturun. Verilen İngilizce cümlenin hangi Türkçe çevirisinin doğru olduğunu seçin ve anında geri bildirim alın.</p>
-                    <button id="getNewQuestionBtn" class="w-full bg-yellow-500 text-white font-semibold py-2 px-4 rounded-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 flex items-center justify-center mb-4">
+                 <div class="card mt-4">
+                    <p class="text-center text-gray-700 mb-4">Aşağıdaki butona basarak yeni bir "Okuma Parçası" sorusu oluşturun. Doğru seçeneği belirleyin ve anında, strateji odaklı geri bildirim alın.</p>
+                    <button id="getNewQuestionBtn" class="w-full bg-indigo-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 flex items-center justify-center mb-4">
                         Yeni Soru Getir
                     </button>
                     <div id="quizLoader" class="hidden mx-auto loader"></div>
                     <div id="quiz-area" class="hidden">
                         <div class="mb-4">
-                            <p class="text-sm font-medium text-gray-500">İngilizce Cümle:</p>
-                            <p id="englishSentence" class="text-lg p-3 bg-gray-100 rounded-md"></p>
+                            <p class="text-sm font-medium text-gray-500">Okuma Parçası:</p>
+                            <p id="paragraphText" class="text-base p-3 bg-gray-100 rounded-md leading-relaxed h-48 overflow-y-auto"></p>
                         </div>
-                        <div id="translationOptions" class="space-y-4">
-                            <!-- Çeviri seçenekleri buraya gelecek -->
+                        <div class="mb-4">
+                             <p class="text-sm font-medium text-gray-500">Soru:</p>
+                            <p id="questionText" class="text-base font-semibold p-3 bg-gray-100 rounded-md"></p>
+                        </div>
+                        <div id="optionsContainer" class="space-y-3">
+                            <!-- Seçenekler buraya gelecek -->
                         </div>
                     </div>
                     <div id="evaluationResult" class="mt-6"></div>
@@ -285,12 +237,13 @@
             }
         }
 
-        // --- BÖLÜM 4: DOĞRU ÇEVİRİYİ BUL SCRIPT ---
+        // --- BÖLÜM 3: PRATİK SCRIPT ---
         const getNewQuestionBtn = document.getElementById('getNewQuestionBtn');
         const quizLoader = document.getElementById('quizLoader');
         const quizArea = document.getElementById('quiz-area');
-        const englishSentenceEl = document.getElementById('englishSentence');
-        const translationOptionsEl = document.getElementById('translationOptions');
+        const paragraphTextEl = document.getElementById('paragraphText');
+        const questionTextEl = document.getElementById('questionText');
+        const optionsContainerEl = document.getElementById('optionsContainer');
         const evaluationResultEl = document.getElementById('evaluationResult');
         let quizData = {};
 
@@ -302,46 +255,40 @@
             evaluationResultEl.innerHTML = '';
             getNewQuestionBtn.disabled = true;
 
-            const prompt = `Create a translation quiz item for a YDS exam. Provide a complex English sentence, a correct Turkish translation, and an incorrect but plausible Turkish translation that contains a common error (e.g., wrong tense, wrong conjunction, active/passive mismatch). Also provide explanations in Turkish for both. Your response MUST be a single, valid JSON object with these exact keys: "english_sentence", "correct_translation", "incorrect_translation", "correct_explanation_tr", "incorrect_explanation_tr".`;
+            const prompt = `Create a YDS-style reading comprehension quiz item. The paragraph should be about a scientific or social topic. The question should test a specific reading strategy (e.g., main idea, inference, specific detail, vocabulary in context). Your response must be a single, valid JSON object with these keys: "paragraph", "question", "options" (an array of 4 strings), "correct_answer_index" (number 0-3), and "explanation_tr" (a string in Turkish explaining why the correct answer is correct, referencing a specific strategy like "Ana Fikir Sorusu", "Çıkarım Sorusu", or "Detay Sorusu").`;
             const generationConfig = {
                 responseMimeType: "application/json",
                 responseSchema: {
                     type: "OBJECT",
                     properties: {
-                        "english_sentence": { "type": "STRING" },
-                        "correct_translation": { "type": "STRING" },
-                        "incorrect_translation": { "type": "STRING" },
-                        "correct_explanation_tr": { "type": "STRING" },
-                        "incorrect_explanation_tr": { "type": "STRING" }
+                        "paragraph": { "type": "STRING" },
+                        "question": { "type": "STRING" },
+                        "options": { "type": "ARRAY", "items": { "type": "STRING" } },
+                        "correct_answer_index": { "type": "NUMBER" },
+                        "explanation_tr": { "type": "STRING" }
                     },
-                    required: ["english_sentence", "correct_translation", "incorrect_translation", "correct_explanation_tr", "incorrect_explanation_tr"]
+                    required: ["paragraph", "question", "options", "correct_answer_index", "explanation_tr"]
                 }
             };
 
             try {
                 quizData = await callGemini(prompt, generationConfig);
-                englishSentenceEl.textContent = quizData.english_sentence;
+                paragraphTextEl.textContent = quizData.paragraph;
+                questionTextEl.textContent = quizData.question;
                 
-                translationOptionsEl.innerHTML = '';
-                const options = [
-                    { text: quizData.correct_translation, correct: true },
-                    { text: quizData.incorrect_translation, correct: false }
-                ];
-                
-                options.sort(() => Math.random() - 0.5);
-
-                options.forEach(opt => {
+                optionsContainerEl.innerHTML = '';
+                quizData.options.forEach((opt, index) => {
                     const button = document.createElement('button');
-                    button.textContent = opt.text;
-                    button.className = 'w-full p-3 border border-gray-300 rounded-md text-left hover:bg-gray-100 transition-colors';
-                    button.dataset.correct = opt.correct;
-                    button.addEventListener('click', checkTranslationAnswer);
-                    translationOptionsEl.appendChild(button);
+                    button.innerHTML = `<span class="font-bold mr-2">${String.fromCharCode(65 + index)})</span> ${opt}`;
+                    button.className = 'w-full p-3 border border-gray-300 rounded-md text-left hover:bg-gray-100 transition-colors flex items-start';
+                    button.dataset.index = index;
+                    button.addEventListener('click', checkReadingAnswer);
+                    optionsContainerEl.appendChild(button);
                 });
 
                 quizArea.classList.remove('hidden');
             } catch (error) {
-                englishSentenceEl.textContent = "Soru oluşturulamadı, lütfen tekrar deneyin.";
+                paragraphTextEl.textContent = "Soru oluşturulamadı, lütfen tekrar deneyin.";
                 quizArea.classList.remove('hidden');
             } finally {
                 quizLoader.classList.add('hidden');
@@ -349,39 +296,26 @@
             }
         }
 
-        function checkTranslationAnswer(event) {
-            const selectedButton = event.target;
-            const isCorrect = selectedButton.dataset.correct === 'true';
+        function checkReadingAnswer(event) {
+            const selectedButton = event.currentTarget;
+            const selectedIndex = parseInt(selectedButton.dataset.index);
             
-            const allButtons = translationOptionsEl.querySelectorAll('button');
-            allButtons.forEach(btn => {
-                btn.disabled = true;
-                if (btn.dataset.correct === 'true') {
-                    btn.classList.add('bg-green-100', 'border-green-500');
-                } else {
-                    btn.classList.add('bg-red-100', 'border-red-500');
-                }
-            });
+            const allButtons = optionsContainerEl.querySelectorAll('button');
+            allButtons.forEach(btn => btn.disabled = true);
 
-            let feedbackHtml = `
-                <div class="p-4 bg-green-50 border border-green-300 rounded-md mb-4">
-                    <h4 class="font-bold text-green-800">✅ DOĞRU ÇEVİRİ ANALİZİ</h4>
-                    <p class="mt-2 text-green-700">${quizData.correct_explanation_tr}</p>
-                </div>
-                <div class="p-4 bg-red-50 border border-red-300 rounded-md">
-                    <h4 class="font-bold text-red-800">❌ YANLIŞ ÇEVİRİ ANALİZİ</h4>
-                    <p class="mt-2 text-red-700">${quizData.incorrect_explanation_tr}</p>
-                </div>
-            `;
-            
-            if (isCorrect) {
-                selectedButton.classList.add('ring-2', 'ring-green-500');
+            if (selectedIndex === quizData.correct_answer_index) {
+                selectedButton.classList.remove('border-gray-300', 'hover:bg-gray-100');
+                selectedButton.classList.add('bg-green-100', 'border-green-500', 'ring-2', 'ring-green-300');
+                evaluationResultEl.innerHTML = `<div class="p-4 bg-green-50 border border-green-300 rounded-md"><h4 class="font-bold text-green-800">🎉 Doğru!</h4><p class="mt-2 text-green-700">${quizData.explanation_tr}</p></div>`;
             } else {
-                selectedButton.classList.add('ring-2', 'ring-red-500');
+                selectedButton.classList.remove('border-gray-300', 'hover:bg-gray-100');
+                selectedButton.classList.add('bg-red-100', 'border-red-500', 'ring-2', 'ring-red-300');
+                allButtons[quizData.correct_answer_index].classList.add('bg-green-100', 'border-green-500');
+                
+                evaluationResultEl.innerHTML = `<div class="p-4 bg-red-50 border border-red-300 rounded-md"><h4 class="font-bold text-red-800">🤔 Yanlış.</h4><p class="mt-2 text-red-700">Doğru cevap yeşil ile vurgulanmıştır. Açıklaması: ${quizData.explanation_tr}</p></div>`;
             }
-
-            evaluationResultEl.innerHTML = feedbackHtml;
         }
     </script>
 </body>
 </html>
+     
