@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YDS için Çeviri Teknikleri ve Sınav Stratejileri</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            border: 1px solid #e5e7eb;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .strategy-box {
+            background-color: #fefce8; /* yellow-50 */
+            border: 1px solid #fde047; /* yellow-300 */
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0.5rem;
+        }
+        .main-verb { color: #1d4ed8; font-weight: 700; }
+        .subject { color: #be123c; font-weight: 700; }
+        .sub-clause { color: #059669; font-style: italic; }
+        .main-clause { background-color: #eff6ff; padding: 2px 5px; border-radius: 4px; }
+        .wrong-translation { background-color: #fee2e2; color: #991b1b; padding: 0.5rem; border-radius: 0.25rem; }
+        .correct-translation { background-color: #dcfce7; color: #166534; padding: 0.5rem; border-radius: 0.25rem; }
+        
+        .content-wrapper {
+            transition: max-height 0.5s ease-in-out;
+            overflow: hidden;
+            max-height: 0;
+        }
+        .content-wrapper.open {
+            max-height: 4000px; /* İçeriğin sığacağı kadar büyük bir değer */
+        }
+        .chevron {
+            transition: transform 0.3s ease-in-out;
+        }
+        .chevron.open {
+            transform: rotate(90deg);
+        }
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 4px solid #3498db;
+            width: 24px;
+            height: 24px;
+            animation: spin 2s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-4xl">
+
+        <!-- Başlık -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900">YDS Çeviri Stratejileri Rehberi</h1>
+            <p class="mt-4 text-lg text-gray-600">Cümle yapısını anlayın, püf noktalarını öğrenin ve doğru çeviriye ulaşın.</p>
+        </header>
+
+        <!-- BÖLÜM 1: TEMEL PRENSİPLER -->
+        <section class="mb-12">
+            <h2 class="section-toggle text-3xl font-bold mb-2 border-l-4 border-gray-500 pl-4 flex justify-between items-center cursor-pointer" data-target="#bolum1-content">
+                <span>Bölüm 1: Temel Çeviri Prensipleri</span>
+                <svg class="chevron w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </h2>
+            <div id="bolum1-content" class="content-wrapper pl-6">
+                <div class="card mt-4">
+                    <p>İyi bir çeviri, kelimeleri tek tek çevirmek değil, cümlenin anlamını ve yapısını doğru bir şekilde Türkçe'ye aktarmaktır. Sınavda başarılı olmak için şu üç temel adımı izleyin:</p>
+                    <ol class="list-decimal list-inside mt-4 space-y-2">
+                        <li><strong>Önce Cümlenin İskeletini Bulun:</strong> Cümlenin ana öznesini (Subject) ve ana fiilini (Main Verb) tespit edin. Cümlenin temel anlamı bu ikili üzerindedir.</li>
+                        <li><strong>Yan Cümleleri ve Bağlaçları Çözümleyin:</strong> Ana cümleye ek bilgi veren yan cümlecikleri (`who`, `which`, `because`, `if` vb. ile başlayan) ve bunların ana cümleye nasıl bağlandığını anlayın.</li>
+                        <li><strong>Türkçe Cümle Kurallarına Uyun:</strong> İngilizce'deki S+V+O (Özne+Fiil+Nesne) yapısını, Türkçe'nin kurallı cümle yapısına (genellikle Özne+...Nesne...+Yüklem) doğru şekilde dönüştürün.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- BÖLÜM 2: CÜMLE YAPISINI ÇÖZÜMLEME -->
+        <section class="mb-12">
+            <h2 class="section-toggle text-3xl font-bold mb-2 border-l-4 border-blue-500 pl-4 flex justify-between items-center cursor-pointer" data-target="#bolum2-content">
+                <span>Bölüm 2: Cümle Yapısını Çözümleme Sanatı</span>
+                <svg class="chevron w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </h2>
+            <div id="bolum2-content" class="content-wrapper pl-6">
+                <div class="card mt-4">
+                    <h3 class="font-semibold text-xl mb-4">Ana Cümle ve Ana Fiili Bulmak</h3>
+                     <div class="strategy-box">
+                        <p class="font-semibold">Örnek Analizi 1 (Adjective Clause):</p>
+                        <p class="mt-2 text-lg">"The scientist <em class="sub-clause">who won the Nobel Prize last year</em> <strong class="main-verb">visited</strong> our university."</p>
+                        <div class="mt-4">
+                            <p class="font-medium">❌ Yanlış Çeviri (Sık Yapılan Hata):</p>
+                            <p class="wrong-translation">"Geçen yıl Nobel Ödülü'nü kazanan bilim insanı üniversitemizi ziyaret etmişti."</p>
+                            <p class="text-sm mt-1"><strong>Neden Yanlış?</strong> Bu çevirideki "-mişti" eki, İngilizce'deki Past Perfect Tense (`had visited`) karşılığıdır. Orijinal cümlede ise Past Simple Tense (`visited`) kullanılmıştır. Bu, zaman kaymasına neden olan yaygın bir hatadır.</p>
+                        </div>
+                        <div class="mt-4">
+                            <p class="font-medium">✅ Doğru Çeviri ve Analiz:</p>
+                            <p class="correct-translation">Geçen yıl Nobel Ödülü'nü kazanan bilim insanı, üniversitemizi ziyaret etti.</p>
+                             <p class="text-sm mt-1"><strong>Analiz:</strong> Cümlenin ana fiili `visited` (ziyaret etti), öznesi ise `The scientist who won...` (kazanan bilim insanı)'dır. Çeviri, bu temel Özne-Yüklem iskeletine ve doğru zamana sadık kalmalıdır. (Strateji 1)</p>
+                        </div>
+                    </div>
+                     <div class="strategy-box">
+                        <p class="font-semibold">Örnek Analizi 2 (Adverb Clause & Bağlaç):</p>
+                        <p class="mt-2 text-lg">"<em class="sub-clause">Although the team played well</em>, <span class="subject">they</span> <strong class="main-verb">lost</strong> the match."</p>
+                         <div class="mt-4">
+                            <p class="font-medium">❌ Yanlış Çeviri (Sık Yapılan Hata):</p>
+                            <p class="wrong-translation">"Takım iyi oynadı ama maçı kaybetti."</p>
+                            <p class="text-sm mt-1"><strong>Neden Yanlış?</strong> `Although` bağlacı `but` (ama) ile yakın anlamlı olsa da, cümlenin yapısını değiştirir. `Although` ile başlayan yan cümle, ana cümlenin başına gelerek zarf görevi görür. "Ama" bağlacı ise iki ana cümleyi ortadan bağlar. Bu çeviri, orijinal cümlenin yapısını tam olarak yansıtmaz.</p>
+                        </div>
+                        <div class="mt-4">
+                            <p class="font-medium">✅ Doğru Çeviri ve Analiz:</p>
+                            <p class="correct-translation">Takım iyi oynamasına rağmen maçı kaybetti.</p>
+                             <p class="text-sm mt-1"><strong>Analiz:</strong> `Although` bağlacı "-e rağmen" anlamı katar ve yan cümlenin ana cümleye bir zıtlık koşulu eklemesini sağlar. Doğru çeviri, bu bağlacın anlamını tam olarak yansıtmalıdır. (Strateji 2)</p>
+                        </div>
+                    </div>
+                     <div class="strategy-box">
+                        <p class="font-semibold">Örnek Analizi 3 (Passive Voice):</p>
+                        <p class="mt-2 text-lg">"<span class="subject">A new policy</span> <strong class="main-verb">has been implemented</strong> <em class="sub-clause">to reduce pollution</em>."</p>
+                         <div class="mt-4">
+                            <p class="font-medium">❌ Yanlış Çeviri (Sık Yapılan Hata):</p>
+                            <p class="wrong-translation">"Yeni bir politika kirliliği azaltmak için uyguladı."</p>
+                            <p class="text-sm mt-1"><strong>Neden Yanlış?</strong> Bu çeviri, pasif (edilgen) olan `has been implemented` yapısını aktif (etken) bir fiilmiş gibi çevirmiştir. Politika bir şeyi uygulamaz, politika uygulanır. Bu, cümlenin anlamını tamamen bozar.</p>
+                        </div>
+                        <div class="mt-4">
+                            <p class="font-medium">✅ Doğru Çeviri ve Analiz:</p>
+                            <p class="correct-translation">Kirliliği azaltmak için yeni bir politika uygulanmıştır.</p>
+                             <p class="text-sm mt-1"><strong>Analiz:</strong> `has been implemented` yapısı pasif olduğu için Türkçe'ye "-mıştır, -ilmiştir" gibi edilgenlik ekleriyle çevrilmelidir. Eylemi yapan değil, eylemden etkilenen (politika) öznedir. (Strateji 3)</p>
+                        </div>
+                    </div>
+                     <div class="strategy-box">
+                        <p class="font-semibold">Örnek Analizi 4 (Miktar İfadesi):</p>
+                        <p class="mt-2 text-lg">"<span class="subject">Only a few students</span> <em class="sub-clause">who took the advanced course</em> <strong class="main-verb">understood</strong> the professor's lecture."</p>
+                        <div class="mt-4">
+                            <p class="font-medium">❌ Yanlış Çeviri (Sık Yapılan Hata):</p>
+                            <p class="wrong-translation">"İleri seviye dersi alan az sayıda öğrenci profesörün dersini anladı."</p>
+                            <p class="text-sm mt-1"><strong>Neden Yanlış?</strong> Bu çeviri doğruya yakın olsa da, cümlenin anlamını kısıtlayan ve vurgulayan `Only` (sadece) kelimesini atlamıştır. Sınavlarda bu tür küçük ama önemli detaylar şıkları birbirinden ayırır.</p>
+                        </div>
+                        <div class="mt-4">
+                            <p class="font-medium">✅ Doğru Çeviri ve Analiz:</p>
+                            <p class="correct-translation">İleri seviye dersi alan sadece birkaç öğrenci profesörün dersini anladı.</p>
+                             <p class="text-sm mt-1"><strong>Analiz:</strong> `Only a few` ifadesi "az sayıda" değil, "sadece birkaç" olarak daha kesin bir anlam taşır. Çeviride bu kısıtlayıcı ifadenin tam karşılığı verilmelidir. (Strateji 4)</p>
+                        </div>
+                    </div>
+                     <div class="strategy-box">
+                        <p class="font-semibold">Örnek Analizi 5 (Noun Clause):</p>
+                        <p class="mt-2 text-lg">"<span class="subject">The committee</span> <strong class="main-verb">announced</strong> <em class="sub-clause">that the project would be delayed</em>."</p>
+                        <div class="mt-4">
+                            <p class="font-medium">❌ Yanlış Çeviri (Sık Yapılan Hata):</p>
+                            <p class="wrong-translation">"Projenin erteleneceği komite tarafından duyuruldu."</p>
+                            <p class="text-sm mt-1"><strong>Neden Yanlış?</strong> Orijinal cümle aktif bir yapıdadır (`The committee announced...`). Bu çeviri ise cümleyi pasif hale getirmiştir (`...duyuruldu`). Bu, cümlenin öznesini ve vurgusunu değiştirir.</p>
+                        </div>
+                        <div class="mt-4">
+                            <p class="font-medium">✅ Doğru Çeviri ve Analiz:</p>
+                            <p class="correct-translation">Komite, projenin erteleneceğini duyurdu.</p>
+                             <p class="text-sm mt-1"><strong>Analiz:</strong> Cümlenin ana öznesi `The committee` ve ana fiili `announced` olduğu için çeviri bu aktif yapıyı korumalıdır. `that...` ile başlayan Noun Clause ise cümlenin nesnesidir. (Strateji 1 & 3)</p>
+                        </div>
+                    </div>
+                     <div class="strategy-box">
+                        <p class="font-semibold">Örnek Analizi 6 (Karmaşık Yapı):</p>
+                        <p class="mt-2 text-lg">"<span class="subject">Many experts</span> <strong class="main-verb">believe</strong> <em class="sub-clause">that the new regulations, which were introduced to protect the environment, will also boost the economy.</em>"</p>
+                        <div class="mt-4">
+                            <p class="font-medium">❌ Yanlış Çeviri (Sık Yapılan Hata):</p>
+                            <p class="wrong-translation">"Birçok uzman, yeni düzenlemelerin ekonomiyi de canlandıracağına ve çevreyi korumak için getirildiğine inanıyor."</p>
+                            <p class="text-sm mt-1"><strong>Neden Yanlış?</strong> Bu çeviri, iç içe geçmiş iki yan cümleyi sanki aynı seviyedeymiş gibi "ve" bağlacıyla bağlamıştır. Oysa `which...` ile başlayan kısım, `that...` ile başlayan cümlenin içindeki "regulations" kelimesini niteleyen bir ara bilgidir.</p>
+                        </div>
+                        <div class="mt-4">
+                            <p class="font-medium">✅ Doğru Çeviri ve Analiz:</p>
+                            <p class="correct-translation">Birçok uzman, çevreyi korumak için getirilen yeni düzenlemelerin ekonomiyi de canlandıracağına inanıyor.</p>
+                             <p class="text-sm mt-1"><strong>Analiz:</strong> `which...` ile başlayan Adjective Clause, nitelediği isim olan "yeni düzenlemeler" ifadesinin hemen arkasına "-an/-en" ekiyle eklenmelidir. Bu, cümlenin doğru ve akıcı olmasını sağlar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BÖLÜM 3: SINAV STRATEJİLERİ -->
+        <section class="mb-12">
+            <h2 class="section-toggle text-3xl font-bold mb-2 border-l-4 border-green-500 pl-4 flex justify-between items-center cursor-pointer" data-target="#bolum3-content">
+                <span>Bölüm 3: YDS için Çeviri Püf Noktaları</span>
+                <svg class="chevron w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </h2>
+            <div id="bolum3-content" class="content-wrapper pl-6">
+                <div class="strategy-box mt-4">
+                    <h3 class="font-semibold text-lg mb-2">1. Özne ve Yüklem Eşleştirmesi Yapın</h3>
+                    <p>İngilizce cümlenin öznesini ve ana fiilini bulun. Sonra seçeneklerde bu özne ve yüklemin doğru çevrildiği şıkkı arayın. Bu yöntem, seçeneklerin çoğunu elemenizi sağlar.</p>
+                </div>
+                <div class="strategy-box">
+                    <h3 class="font-semibold text-lg mb-2">2. Bağlaçların Karşılığını Doğru Bulun</h3>
+                    <p>`Although` -> "-e rağmen", `Since` -> "-dığı için / -den beri", `Unless` -> "-medikçe" gibi bağlaçların Türkçe karşılıklarını doğru içeren seçeneğe odaklanın.</p>
+                </div>
+                <div class="strategy-box">
+                    <h3 class="font-semibold text-lg mb-2">3. Pasif (Passive) ve Aktif (Active) Ayrımına Dikkat Edin</h3>
+                    <p>İngilizce cümledeki `is done`, `was built`, `have been seen` gibi pasif yapılar, Türkçe'ye de "-ılmak, -ilmek" gibi edilgenlik ekleriyle çevrilmelidir. Aktif bir cümlenin çevirisi pasif olamaz.</p>
+                </div>
+                 <div class="strategy-box">
+                    <h3 class="font-semibold text-lg mb-2">4. Miktar ve Sıfat İfadelerini Gözden Kaçırmayın</h3>
+                    <p>`Some`, `many`, `more`, `the most`, `only`, `especially` gibi kelimeler cümlenin anlamını değiştirir. Çeviride bu kelimelerin karşılığının bulunduğundan emin olun.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- BÖLÜM 4: GEMINI İLE PRATİK -->
+        <section>
+            <h2 class="section-toggle text-3xl font-bold mb-2 border-l-4 border-indigo-500 pl-4 flex justify-between items-center cursor-pointer" data-target="#bolum4-content">
+                <span>✨ Bölüm 4: Gemini ile Çeviri Pratiği</span>
+                <svg class="chevron w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </h2>
+            <div id="bolum4-content" class="content-wrapper pl-6">
+                <div class="card mt-4">
+                    <p class="text-center text-gray-700 mb-4">Aşağıdaki butona basarak yeni bir çeviri sorusu oluşturun. Verilen İngilizce cümlenin hangi Türkçe çevirisinin doğru olduğunu seçin ve anında geri bildirim alın.</p>
+                    <button id="getNewQuestionBtn" class="w-full bg-yellow-500 text-white font-semibold py-2 px-4 rounded-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500 flex items-center justify-center mb-4">
+                        Yeni Soru Getir
+                    </button>
+                    <div id="quizLoader" class="hidden mx-auto loader"></div>
+                    <div id="quiz-area" class="hidden">
+                        <div class="mb-4">
+                            <p class="text-sm font-medium text-gray-500">İngilizce Cümle:</p>
+                            <p id="englishSentence" class="text-lg p-3 bg-gray-100 rounded-md"></p>
+                        </div>
+                        <div id="translationOptions" class="space-y-4">
+                            <!-- Çeviri seçenekleri buraya gelecek -->
+                        </div>
+                    </div>
+                    <div id="evaluationResult" class="mt-6"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Accordion functionality
+        const toggles = document.querySelectorAll('.section-toggle');
+        toggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const targetId = toggle.dataset.target;
+                const targetContent = document.querySelector(targetId);
+                const chevron = toggle.querySelector('.chevron');
+                const isOpen = targetContent.classList.contains('open');
+                document.querySelectorAll('.content-wrapper.open').forEach(openContent => {
+                    if (openContent !== targetContent) {
+                        openContent.classList.remove('open');
+                        document.querySelector(`[data-target="#${openContent.id}"] .chevron`).classList.remove('open');
+                    }
+                });
+                if (!isOpen) {
+                    targetContent.classList.add('open');
+                    chevron.classList.add('open');
+                }
+            });
+        });
+
+        // --- GEMINI API ORTAK FONKSİYONU ---
+        async function callGemini(prompt, generationConfig, retries = 3, delay = 1000) {
+            const apiKey = "AIzaSyAuFtUiTGRQPMPlOXfcLr_tO--VQwLZwZE";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+            const payload = { contents: [{ role: "user", parts: [{ text: prompt }] }], generationConfig };
+            for (let i = 0; i < retries; i++) {
+                try {
+                    const response = await fetch(apiUrl, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    const result = await response.json();
+                    if (result.candidates && result.candidates[0].content && result.candidates[0].content.parts[0]) {
+                        return JSON.parse(result.candidates[0].content.parts[0].text);
+                    } else { throw new Error('Invalid response structure from API'); }
+                } catch (error) {
+                    if (i === retries - 1) throw error;
+                    await new Promise(res => setTimeout(res, delay));
+                    delay *= 2;
+                }
+            }
+        }
+
+        // --- BÖLÜM 4: DOĞRU ÇEVİRİYİ BUL SCRIPT ---
+        const getNewQuestionBtn = document.getElementById('getNewQuestionBtn');
+        const quizLoader = document.getElementById('quizLoader');
+        const quizArea = document.getElementById('quiz-area');
+        const englishSentenceEl = document.getElementById('englishSentence');
+        const translationOptionsEl = document.getElementById('translationOptions');
+        const evaluationResultEl = document.getElementById('evaluationResult');
+        let quizData = {};
+
+        getNewQuestionBtn.addEventListener('click', getNewQuestion);
+
+        async function getNewQuestion() {
+            quizLoader.classList.remove('hidden');
+            quizArea.classList.add('hidden');
+            evaluationResultEl.innerHTML = '';
+            getNewQuestionBtn.disabled = true;
+
+            const prompt = `Create a translation quiz item for a YDS exam. Provide a complex English sentence, a correct Turkish translation, and an incorrect but plausible Turkish translation that contains a common error (e.g., wrong tense, wrong conjunction, active/passive mismatch). Also provide explanations in Turkish for both. Your response MUST be a single, valid JSON object with these exact keys: "english_sentence", "correct_translation", "incorrect_translation", "correct_explanation_tr", "incorrect_explanation_tr".`;
+            const generationConfig = {
+                responseMimeType: "application/json",
+                responseSchema: {
+                    type: "OBJECT",
+                    properties: {
+                        "english_sentence": { "type": "STRING" },
+                        "correct_translation": { "type": "STRING" },
+                        "incorrect_translation": { "type": "STRING" },
+                        "correct_explanation_tr": { "type": "STRING" },
+                        "incorrect_explanation_tr": { "type": "STRING" }
+                    },
+                    required: ["english_sentence", "correct_translation", "incorrect_translation", "correct_explanation_tr", "incorrect_explanation_tr"]
+                }
+            };
+
+            try {
+                quizData = await callGemini(prompt, generationConfig);
+                englishSentenceEl.textContent = quizData.english_sentence;
+                
+                translationOptionsEl.innerHTML = '';
+                const options = [
+                    { text: quizData.correct_translation, correct: true },
+                    { text: quizData.incorrect_translation, correct: false }
+                ];
+                
+                options.sort(() => Math.random() - 0.5);
+
+                options.forEach(opt => {
+                    const button = document.createElement('button');
+                    button.textContent = opt.text;
+                    button.className = 'w-full p-3 border border-gray-300 rounded-md text-left hover:bg-gray-100 transition-colors';
+                    button.dataset.correct = opt.correct;
+                    button.addEventListener('click', checkTranslationAnswer);
+                    translationOptionsEl.appendChild(button);
+                });
+
+                quizArea.classList.remove('hidden');
+            } catch (error) {
+                englishSentenceEl.textContent = "Soru oluşturulamadı, lütfen tekrar deneyin.";
+                quizArea.classList.remove('hidden');
+            } finally {
+                quizLoader.classList.add('hidden');
+                getNewQuestionBtn.disabled = false;
+            }
+        }
+
+        function checkTranslationAnswer(event) {
+            const selectedButton = event.target;
+            const isCorrect = selectedButton.dataset.correct === 'true';
+            
+            const allButtons = translationOptionsEl.querySelectorAll('button');
+            allButtons.forEach(btn => {
+                btn.disabled = true;
+                if (btn.dataset.correct === 'true') {
+                    btn.classList.add('bg-green-100', 'border-green-500');
+                } else {
+                    btn.classList.add('bg-red-100', 'border-red-500');
+                }
+            });
+
+            let feedbackHtml = `
+                <div class="p-4 bg-green-50 border border-green-300 rounded-md mb-4">
+                    <h4 class="font-bold text-green-800">✅ DOĞRU ÇEVİRİ ANALİZİ</h4>
+                    <p class="mt-2 text-green-700">${quizData.correct_explanation_tr}</p>
+                </div>
+                <div class="p-4 bg-red-50 border border-red-300 rounded-md">
+                    <h4 class="font-bold text-red-800">❌ YANLIŞ ÇEVİRİ ANALİZİ</h4>
+                    <p class="mt-2 text-red-700">${quizData.incorrect_explanation_tr}</p>
+                </div>
+            `;
+            
+            if (isCorrect) {
+                selectedButton.classList.add('ring-2', 'ring-green-500');
+            } else {
+                selectedButton.classList.add('ring-2', 'ring-red-500');
+            }
+
+            evaluationResultEl.innerHTML = feedbackHtml;
+        }
+    </script>
+</body>
+</html>
